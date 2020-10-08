@@ -1,0 +1,6 @@
+> exchange (troca) -> possui tipos ( direct, topic, headers, fanout) 
+> fanout - Transmite tudo o que recebeu nas filas.
+> channel.publish possui o segundo parametro vazio pq não está enviando para uma
+lista em especifico, apenas publicar no exchange.
+> Ao criar a lista temporaria no consumer, dar um bind nela ao exchange para enviar
+os dados as filas geradas pelos consumers.
