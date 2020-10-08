@@ -1,0 +1,17 @@
+>Round-robin, quando possui mais de um worker, as tarefas são distribúidas uma
+para cada worker. Independente se o worker anterior já terminou o processo.
+
+    Worker 1       Worker 2
+    Tarefa 1       Tarefa 2 
+    Tarefa 3       Tarefa 4
+    
+> Quando um worker morre, perde as informações da messagem que estava sendo processada
+Como não possui timeout, assim que detectado um worker a menos, reenvia a mensagem para outro
+e aguarda o ack do mesmo.
+
+>Queue durable ela continua existindo enquanto o servidor estiver on
+>Persistencia na mesnagem garente que ela seja salva no disco
+>prefetch garente quantas tarefas simultaneas cada worker pode executar simultaneamente
+>noAck: false channel.ack(msg) garante que a mensagem não se perca quando um worker 
+vir a falhar, o processo é enviada para outro worker ativo. Ao receber o ack o processo
+é removido da fila.
