@@ -1,0 +1,3 @@
+bindQueue(queueName, exchangeName, key) > key depende do tipo do exchange utilizado
+
+> direct exchange - mensagem vai para a fila que tem a chave igual a da mensagem.
