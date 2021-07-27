@@ -1,0 +1,6 @@
+exchange topic = basicamente é  o exchagne direct só que com uma lista
+de palavras separadas por ponto, com limite de 255 bytes.
+Funciona parecido como uma regex
+
+* = pode ser substituido por uma palavra
+# = pode ser substituido por 0 ou + palavras
