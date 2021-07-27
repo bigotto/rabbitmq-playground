@@ -1,0 +1,5 @@
+adiciona o correlationId na mensagem e o replyTo;
+* correlationId é simplesmente um identificador para quando as mensagens
+cair na fila de respostas, saber identificar a resposta.
+* replyTo é a fila de resposta, para onde essa mensagem deve
+ser enviada no final do processo.
